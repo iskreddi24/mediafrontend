@@ -1,0 +1,57 @@
+/* src/styles/variables.css */
+:root {
+    /* Brand Colors - SBA Red Theme */
+    --primary-color: #ed1c24;
+    --primary-hover: #c41920;
+    --secondary-color: #2c3e50;
+
+    /* Layout */
+    --sidebar-width: 280px;
+    --header-height: 65px;
+
+    /* Backgrounds */
+    --bg-color: #f5f7fa;
+
+    /* Text */
+    --text-light: #7f8c8d;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: #333;
+    font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Global: all form inputs ≥16px to prevent iOS auto-zoom */
+input, select, textarea {
+    font-size: max(16px, 1em);
+}
+
+/* Global: min tap target 44px for interactive elements on mobile */
+@media (max-width: 640px) {
+    button, a, [role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    #root {
+        padding: 0;
+    }
+}
+
+/* dvh fallback for full-screen mobile modals */
+@supports (height: 100dvh) {
+    .modal-overlay, .login-page-wrapper, .admin-dashboard, .dashboard-layout {
+        min-height: 100dvh;
+    }
+}
