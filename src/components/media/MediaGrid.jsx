@@ -77,7 +77,9 @@ const BASE_URL = import.meta.env.VITE_API_URL;const MediaGrid = () => {
       </div>
 
       <div className="media-grid">
-        {mediaList.map((media, index) => {
+       {mediaList
+  .filter(media => media != null)
+  .map((media, index) => {
           const isLast = index === mediaList.length - 1;
           const isSelected = selectedIds.has(media.id);
 
