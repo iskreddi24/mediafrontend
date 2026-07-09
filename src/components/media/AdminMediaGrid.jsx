@@ -114,7 +114,9 @@ const AdminMediaGrid = ({ filters, selectedIds, toggleSelection }) => {
       </div>
 
       <div className="media-grid">
-        {mediaList.map((media, index) => {
+       {mediaList
+  .filter(media => media != null)
+  .map((media, index) => {
           const isLast = index === mediaList.length - 1;
           const isSelected = selectedIds?.has(media.id);
 
