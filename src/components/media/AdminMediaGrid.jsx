@@ -12,8 +12,7 @@ import {
 } from "react-icons/fa";
 import EditMediaModal from "./EditMediaModal";
 
-const BASE_URL = "http://192.168.0.206:8085";
-
+const BASE_URL = import.meta.env.VITE_API_URL;
 const AdminMediaGrid = ({ filters, selectedIds, toggleSelection }) => {
   const { isAdmin } = useAuth();
 
