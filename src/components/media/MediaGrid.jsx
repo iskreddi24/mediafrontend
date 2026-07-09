@@ -109,7 +109,13 @@ setMediaList(prev =>
 
               <div className="card-img-wrapper">
                 <img
-                  src={`${BASE_URL}/uploads/${media.imagePath}`}
+                 src={
+    media.imageUrl
+        ? media.imageUrl
+        : media.imagePath
+            ? `${BASE_URL}/uploads/${media.imagePath}`
+            : LOCAL_PLACEHOLDER
+}
                   alt={media.mediaCode}
                   className="card-img"
                   onError={(e) => {
