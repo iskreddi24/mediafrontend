@@ -28,7 +28,13 @@ const BASE_URL = import.meta.env.VITE_API_URL;const MediaGrid = () => {
 
     try {
       const data = await getMedia(filters, pageToFetch);
-      setMediaList((prev) => pageToFetch === 0 ? data.content : [...prev, ...data.content]);
+     const content = Array.isArray(data.content) ? data.content.filter(Boolean) : [];
+
+setMediaList(prev =>
+    pageToFetch === 0
+        ? content
+        : [...prev, ...content]
+);
       setTotalItems(data.totalElements);
       setHasMore(!data.last);
       if (isNewFilter) setPage(0);
