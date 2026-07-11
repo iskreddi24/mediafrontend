@@ -5,7 +5,7 @@ const MediaContext = createContext();
 // 1. INVENTORY DATA: Used for Sidebar Filters
 export const COMPANY_MEDIA_TYPES = {
     SBA: ["SBA-Hitech Traffic Umbrella", "SBA-Modern Umbrella", "SBA-Traffic Control Booth", "SBA-Traffic Umbrella", "SBA-Arch", "SBA-Bus Shelter", "SBA-Cantilever", "SBA-Lollipop-Boards", "SBA-Pole-Boards"],
-    OUTSPACE: ["Hoarding", "Arch", "Back Lit Board", "Uni-Pole", "Uni-Structure"],
+    OUTSPACE: ["Hoarding","Bus Shelter", "Arch", "Back Lit Board", "Uni-Pole", "Uni-Structure"],
     YUVA: ["Pole-Boards", "Lollipop-Boards",]
 };
 
